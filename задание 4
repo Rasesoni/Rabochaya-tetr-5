@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+int nod(int a, int b){
+    if (a==b){
+        return a;
+    }
+    if (a>b){
+        return nod(a-b,b);
+    } else{
+        return nod(a, b-a);
+    }
+}
+int main(){
+    cout << "VVedite a and b";
+    int a,b;
+    cin >> a >> b;
+    int res = nod(a,b);
+    cout << res;
+}
